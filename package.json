@@ -20,7 +20,8 @@
     "react-toastify": "^9.0.8",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://timhilehin1.github.io/React_e-commerce-app/",
+
+  "homepage": "https://timhilehin1.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
