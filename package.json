@@ -1,8 +1,8 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://timhilehin1.github.io/React_e-commerce-app",
-  "private": false,
+  "homepage": "http://timhilehin1.github.io/",
+  "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
