@@ -11,7 +11,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 import Image from './Components/Image';
-import { BrowserRouter as Router, Routes,  Switch, Link, Redirect, Route} from 'react-router-dom';
+import { HashRouter as Router, Routes,  Route} from 'react-router-dom';
     // import { useLocation } from 'react-router-dom';
 import Checkout from './Components/Checkout';
 import Footer from './Components/Footer';
