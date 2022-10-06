@@ -1,15 +1,10 @@
 
 
 import React, {useEffect, useState, useRef, } from 'react';
-import Data from './Components/Data';
 import Navbar from "./Components/Navbar";
 import Prod from './Components/Prod';
 import Products from "./Components/Products";
-import { Col, Container, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-
 import Image from './Components/Image';
 import { HashRouter as Router, Routes,  Route} from 'react-router-dom';
     // import { useLocation } from 'react-router-dom';
@@ -26,7 +21,7 @@ function App() {
   const [number, SetNumber] = useState(0)
   let displayref = useRef()
 
-  console.log(displayref.current)
+  
 
  function WithNav(){
    return (
@@ -56,7 +51,7 @@ function App() {
    )
  }
 
-console.log(displayref)
+
 
   return (
     <Router>

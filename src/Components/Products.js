@@ -45,7 +45,7 @@ function Products(prop) {
 
 
 
-      console.log('otilor')
+      
 
 
 

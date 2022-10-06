@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {   Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { BiShoppingBag } from "react-icons/bi"
 import { GiNigeria } from "react-icons/gi"
@@ -8,7 +8,7 @@ import { HiOutlineUser } from "react-icons/hi"
 import Products from "./Products";
 
 function Navbar(prop) {
-  console.log(prop)
+  // console.log(prop)
   const fontStyles = {fontSize:'1.2rem'}
     return (
         <>
