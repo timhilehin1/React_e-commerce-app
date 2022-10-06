@@ -1,7 +1,8 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://timhilehin1.github.io/React_e-commerce-app",
+  "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -21,7 +22,7 @@
     "web-vitals": "^2.1.4"
   },
 
-  "homepage": "https://timhilehin1.github.io/",
+  
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
