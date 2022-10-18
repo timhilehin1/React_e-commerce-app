@@ -30,6 +30,13 @@ code {
 
 }
 
+.searchbar{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+}
+
 .ul-list {
     display: flex;
     list-style: none;
@@ -70,7 +77,7 @@ code {
 }
 
 .third-section {
-    gap: 5rem;
+    gap: 3rem;
     cursor: pointer;
     height: 100%;
     display: flex;
@@ -78,9 +85,9 @@ code {
 
 }
 
-.third-section div {
+/* .third-section div { */
     /* border-right: 1px solid white; */
-}
+/* } */
 
 img {
     cursor: pointer;
@@ -281,6 +288,8 @@ button:disabled {
 .offcanvas {
     background-color: black;
 }
+
+
 
 @media only screen and (min-width: 1200px) {
     .input {

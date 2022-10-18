@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {   Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { BiShoppingBag } from "react-icons/bi"
@@ -8,8 +8,27 @@ import { HiOutlineUser } from "react-icons/hi"
 import Products from "./Products";
 
 function Navbar(prop) {
-  // console.log(prop)
   const fontStyles = {fontSize:'1.2rem'}
+  // const [temp, SetTemp] = useState("")
+  // console.log(prop.Query)
+
+  const hold = useRef("")
+
+useEffect(()=>{
+  hold.current.focus() 
+},[])
+
+  function handleInput(e){
+        prop.SetTemp(e.target.value)
+            
+  }
+  // prop.Searchref.current.focus()
+
+  console.log(prop.temp)
+
+
+
+  
     return (
         <>
 
@@ -63,7 +82,7 @@ function Navbar(prop) {
     </div>
 
     <div className="third-section d-flex pe-4 pe-lg-0 ">
-      <div className=""><BsSearch style={{fontSize:'1.2rem'}}/></div>
+      <div className="d-flex"><BsSearch className="d-none d-xl-flex mt-1" style={{fontSize:'1rem'}}/><input ref={hold} className="searchbar" onChange={handleInput} value={prop.temp} placeholder="search product name"/></div>
       <div className="d-none d-lg-flex"><HiOutlineUser style={fontStyles}/></div>
       <div className=""><BiShoppingBag style={fontStyles}/><Link className="items-style" to="/Checkout">{prop.number}</Link></div>
       <div className="d-none d-lg-flex"><img alt="United States" src="http://purecatamphetamine.github.io/country-flag-icons/3x2/NG.svg" style={{height:"1rem "}}/></div>

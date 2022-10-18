@@ -20,8 +20,8 @@ import { Outlet} from 'react-router';
 function App() {
   const [number, SetNumber] = useState(0)
   let displayref = useRef()
-
-  
+  let Searchref = useRef("")
+  let [temp, SetTemp] = useState("")  
 
  function WithNav(){
    return (
@@ -29,7 +29,10 @@ function App() {
    <Navbar
    number={number}
    SetNumber={SetNumber}
-   forwardedRef = {displayref}/>
+   forwardedRef = {displayref}
+    Searchref = {Searchref}
+    temp = {temp}
+    SetTemp= {SetTemp}/>
    <Image/>
    <Outlet/>
    <Footer/>
@@ -41,8 +44,8 @@ function App() {
    return (
      <>
      <Navbar
-     number={number}
-     SetNumber={SetNumber}
+    //  number={number}
+    //  SetNumber={SetNumber}
      
 
      />
@@ -69,7 +72,12 @@ function App() {
  <Route  path="/"  element={<Products
  number={number}
  SetNumber={SetNumber}
-forwardedRef={displayref}/>}/></Route>
+ temp={temp}
+ SetTemp={SetTemp}
+forwardedRef={displayref}
+Searchref ={Searchref}
+
+/>}/></Route>
 
  {/* <Route element={<WithNavOnly/>}> */}
  <Route path='/Checkout' element={<Checkout

@@ -12,10 +12,13 @@ import { AiTwotoneSetting } from "react-icons/ai";
 
 function Products(prop) {
   const [arry, setArry] = useState(JSON.parse(sessionStorage.getItem("arry"))||[])
+  // console.log(prop.Query)
 
 //   let displayref = useRef()
-  let successRef = useRef()
+  // let successRef = useRef()
+  
 
+  console.log(prop.temp)
 
   useEffect(()=>{
    prop.SetNumber(arry.length)
@@ -29,7 +32,7 @@ function Products(prop) {
 
   function closePopup(){
     prop.forwardedRef.current.style.display = 'none'
-    successRef.current.style.display = 'none'
+    
   }
 
   function handleClick(name, price, image,id,quantity){
@@ -52,7 +55,7 @@ function Products(prop) {
 
 
       setArry((prevarry)=>{
-        successRef.current.style.display = 'block'
+
         return [
           ...prevarry,
           {name,price, image, id, quantity},
@@ -71,23 +74,23 @@ function Products(prop) {
   console.log(arry)
 
 
-  let ProductCards = Data.map((item)=>{
-    return (
+  // let ProductCards = Data.map((item)=>{
+  //   return (
 
-       <Prod
-       key={item.id}
-       name={item.name}
-       price={item.price}
-       imgSrc={item.imgSrc}
-       handleClick={()=>handleClick(item.name, item.price, item.imgSrc, item.id, item.Quantity)}/>
+  //      <Prod
+  //      key={item.id}
+  //      name={item.name}
+  //      price={item.price}
+  //      imgSrc={item.imgSrc}
+  //      handleClick={()=>handleClick(item.name, item.price, item.imgSrc, item.id, item.Quantity)}/>
 
-    )
-  })
+  //   )
+  // })
 
 
     return (
         <>
-        <div ref={successRef} className="Snackbar-success">Product succesfully added</div>
+        {/* <div ref={successRef} className="Snackbar-success">Product succesfully added</div> */}
 
     {/* Beginning of Accordion */}
             <div className='mt-3 Accordion-section container-fluid'>
@@ -145,7 +148,19 @@ function Products(prop) {
 
     {/* beginning of products */}
     <div class="ng grid col">
-      {ProductCards}
+      {/* {ProductCards} */}
+      { Data.filter((item)=>item.name.toLowerCase().includes(prop.temp)).map((item)=>{
+    return (
+
+       <Prod
+       key={item.id}
+       name={item.name}
+       price={item.price}
+       imgSrc={item.imgSrc}
+       handleClick={()=>handleClick(item.name, item.price, item.imgSrc, item.id, item.Quantity)}/>
+
+    )
+  })}
       </div>
      
   </div>
