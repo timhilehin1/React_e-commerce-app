@@ -9,7 +9,6 @@ import {Formik, useFormik} from 'formik'
 function Checkout(prop){
 
    const [SourceData, setSourceData] = useState([])
-   console.log(SourceData)
    const [Total, setTotal] = useState(0)
    const[billingTotal, setbillingTotal] = useState(0)
    let InitialSum = 0
@@ -143,7 +142,6 @@ return filtered
         })
     }
 
-    console.log(FormData)
 
 
 
@@ -203,10 +201,10 @@ const formik = useFormik({
      }
 })
 
-console.log('Form errors', formik.errors)
+// console.log('Form errors', formik.errors)
 
 const inputRef = useRef();
-console.log(inputRef.current)
+// console.log(inputRef.current)
 if(!formik.errors.FirstName){
 // inputClass.classList.add('green-border')
 }

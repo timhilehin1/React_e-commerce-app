@@ -1,13 +1,7 @@
 
-import Card from "./Prod";
 import React, { useEffect, useState, useRef, forwardRef } from 'react';
 import Data from './Data';
 import Prod from "./Prod";
-import Navbar from "./Navbar";
-import App from "../App";
-import { Col, Container, Row } from 'react-bootstrap';
-import { AiTwotoneSetting } from "react-icons/ai";
-
 
 
 function Products(prop) {
@@ -18,7 +12,7 @@ function Products(prop) {
   // let successRef = useRef()
   
 
-  console.log(prop.temp)
+  // console.log(prop.temp)
 
   useEffect(()=>{
    prop.SetNumber(arry.length)
@@ -48,12 +42,6 @@ function Products(prop) {
 
 
 
-      
-
-
-
-
-
       setArry((prevarry)=>{
 
         return [
@@ -71,21 +59,10 @@ function Products(prop) {
 
   }
 
-  console.log(arry)
+  // console.log(arry)
 
 
-  // let ProductCards = Data.map((item)=>{
-  //   return (
 
-  //      <Prod
-  //      key={item.id}
-  //      name={item.name}
-  //      price={item.price}
-  //      imgSrc={item.imgSrc}
-  //      handleClick={()=>handleClick(item.name, item.price, item.imgSrc, item.id, item.Quantity)}/>
-
-  //   )
-  // })
 
 
     return (
@@ -149,7 +126,7 @@ function Products(prop) {
     {/* beginning of products */}
     <div class="ng grid col">
       {/* {ProductCards} */}
-      { Data.filter((item)=>item.name.toLowerCase().includes(prop.temp)).map((item)=>{
+      {  Data.filter((item)=>item.name.toLowerCase().includes(prop.temp)).map((item)=>{
     return (
 
        <Prod
@@ -172,3 +149,4 @@ function Products(prop) {
 }
 
 export default Products
+
