@@ -8,7 +8,7 @@ function CartItems(props){
         <>
         <div className="cartItems mt-2   pt-3 px-3 d-flex " style={{width:"100%", height:"100%"}}>
 
-        <img src={props.image} className="mb-2 " style={{width: "5rem",height: "100%" }}></img>
+        <img alt="" src={props.image} className="mb-2 " style={{width: "5rem",height: "100%" }}></img>
 
         <div   className="imageAndSize d-block">
         <p><b>{props.name}</b></p>
